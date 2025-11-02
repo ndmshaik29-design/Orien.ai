@@ -1,0 +1,210 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://orien-ai-ilxj.vercel.app/
+Subject: =?utf-8?Q?Orien=20=E2=80=94=20Your=20Futuristic=20AI=20Assistant?=
+Date: Sun, 2 Nov 2025 19:57:33 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--nRTE9dhTmBSSwjHv7XDt9BlyVr36uaxYobc0U4piO8----"
+
+
+------MultipartBoundary--nRTE9dhTmBSSwjHv7XDt9BlyVr36uaxYobc0U4piO8----
+Content-Type: text/html
+Content-ID: <frame-ECDDAE96F206C3CB9CB22496041FC9D5@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://orien-ai-ilxj.vercel.app/
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Orien — Your Futuristic AI Assistant</title>
+  <link rel="stylesheet" href="https://orien-ai-ilxj.vercel.app/style.css">
+</head>
+<body>
+  <header class="hero-landing">
+    <div class="hero-inner">
+      <div class="brand">
+        <div class="logo">O</div>
+        <div>
+          <h1>Orien</h1>
+          <p class="tag">Welcome to Orien — Your Futuristic AI Assistant</p>
+        </div>
+      </div>
+      <div class="cta">
+        <button id="openAppBtn" class="btn primary">Chat with Orien</button>
+        <button id="openImagesBtn" class="btn">Generate Images</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="app" style="display:none;">
+    <aside class="sidebar">
+      <div class="side-brand">
+        <div class="logo small">O</div>
+        <div>
+          <h2>Orien</h2>
+          <div class="muted">Futuristic AI • Chat &amp; Image</div>
+        </div>
+      </div>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="chat">Chat</button>
+        <button class="tab" data-tab="image">Image Generator</button>
+      </nav>
+
+      <div class="controls">
+        <button id="clearBtn" class="btn ghost">Clear Chat</button>
+        <button id="downloadBtn" class="btn ghost">Download Last Image</button>
+      </div>
+
+      <footer class="side-note">
+        <small>Deploy to Vercel and add OPENAI_API_KEY in env vars.</small>
+      </footer>
+    </aside>
+
+    <section class="workspace">
+      <header class="workspace-header">
+        <h3 id="workspaceTitle">Chat with Orien</h3>
+        <div class="panel-switch">
+          <button class="panel-pill active" data-panel="chat">Chat</button>
+          <button class="panel-pill" data-panel="image">Image</button>
+        </div>
+      </header>
+
+      <div class="panel-area">
+        <section id="chatPanel" class="panel active">
+          <div id="messages" class="messages">
+            <div class="msg bot">
+              <div class="av">O</div>
+              <div class="bub">Hello — I'm Orien. Ask me anything.</div>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <textarea id="chatInput" placeholder="Type a message..."></textarea>
+            <button id="sendBtn" class="btn primary">Send</button>
+          </div>
+        </section>
+
+        <section id="imagePanel" class="panel" style="display:none;">
+          <div class="image-controls">
+            <input id="imagePrompt" placeholder="Prompt (e.g., 'sleek white-blue city at dawn')">
+            <button id="genImageBtn" class="btn primary">Generate</button>
+          </div>
+
+          <div id="imageGrid" class="image-grid"></div>
+        </section>
+      </div>
+
+      <div class="help-line">
+        <small>Tip: Use clear questions for best chat answers. For images, be vivid and descriptive.</small>
+      </div>
+    </section>
+  </main>
+
+
+
+
+</body></html>
+------MultipartBoundary--nRTE9dhTmBSSwjHv7XDt9BlyVr36uaxYobc0U4piO8----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://orien-ai-ilxj.vercel.app/style.css
+
+@charset "utf-8";
+
+:root { --bg: #f7fbff; --card: #ffffff; --blue: #0b74ff; --accent: #0b74ff; --muted: #6b7280; --glass: rgba(11,116,255,0.06); --shadow: 0 6px 20px rgba(11,116,255,0.08); }
+
+* { box-sizing: border-box; }
+
+body { margin: 0px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial; background: linear-gradient(rgb(247, 251, 255) 0%, rgb(238, 246, 255) 100%); color: rgb(7, 32, 51); min-height: 100vh; display: flex; flex-direction: column; }
+
+.hero-landing { padding: 48px 24px; display: flex; align-items: center; justify-content: center; }
+
+.hero-inner { width: 100%; max-width: 1100px; background: var(--card); border-radius: 14px; padding: 26px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow); }
+
+.brand { display: flex; gap: 14px; align-items: center; }
+
+.logo { width: 72px; height: 72px; border-radius: 14px; background: linear-gradient(135deg,var(--accent),#5bc0ff); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 28px; box-shadow: rgba(11, 116, 255, 0.12) 0px 10px 30px; }
+
+.logo.small { width: 48px; height: 48px; border-radius: 10px; font-size: 18px; }
+
+.tag { margin: 0px; color: var(--muted); }
+
+.cta { display: flex; gap: 12px; }
+
+.btn { padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(7, 20, 30, 0.04); background: white; cursor: pointer; }
+
+.btn.primary { background: linear-gradient(90deg,var(--blue),#5bc0ff); color: white; border: none; box-shadow: var(--shadow); }
+
+.btn.ghost { background: transparent; border: 1px dashed rgba(7, 20, 30, 0.06); }
+
+.app { flex: 1 1 0%; display: flex; padding: 28px; gap: 18px; align-items: stretch; justify-content: center; }
+
+.container { max-width: 1200px; width: 100%; }
+
+.sidebar { width: 300px; background: var(--card); border-radius: 12px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 18px; }
+
+.side-brand { display: flex; gap: 12px; align-items: center; }
+
+.muted { color: var(--muted); font-size: 13px; }
+
+.tabs { display: flex; flex-direction: column; gap: 8px; }
+
+.tab { padding: 10px; border-radius: 8px; text-align: left; cursor: pointer; background: transparent; border: none; }
+
+.tab.active { background: linear-gradient(90deg, rgba(11, 116, 255, 0.06), rgba(91, 192, 255, 0.03)); font-weight: 600; }
+
+.controls { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
+
+.side-note { font-size: 12px; color: var(--muted); }
+
+.workspace { flex: 1 1 0%; display: flex; flex-direction: column; gap: 12px; }
+
+.workspace-header { display: flex; align-items: center; justify-content: space-between; }
+
+.panel-switch { display: flex; gap: 8px; }
+
+.panel-pill { padding: 8px 12px; border-radius: 999px; border: none; cursor: pointer; background: transparent; }
+
+.panel-pill.active { background: linear-gradient(90deg,var(--blue),#5bc0ff); color: white; }
+
+.panel-area { display: flex; gap: 12px; flex-direction: column; }
+
+.panel { background: var(--card); border-radius: 12px; padding: 14px; box-shadow: var(--shadow); min-height: 320px; }
+
+.messages { display: flex; flex-direction: column; gap: 12px; max-height: 420px; overflow: auto; padding: 6px; }
+
+.msg { display: flex; gap: 12px; align-items: flex-start; }
+
+.msg.bot .av { background: linear-gradient(135deg,var(--blue),#5bc0ff); color: white; }
+
+.av { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+
+.bub { padding: 10px; border-radius: 10px; background: linear-gradient(rgba(11, 116, 255, 0.05), rgba(11, 116, 255, 0.02)); max-width: 75%; }
+
+.msg.user { justify-content: flex-end; }
+
+.msg.user .bub { background: linear-gradient(rgb(230, 242, 255), rgb(243, 251, 255)); }
+
+.input-row { display: flex; gap: 8px; margin-top: 10px; }
+
+textarea { flex: 1 1 0%; padding: 12px; border-radius: 10px; border: 1px solid rgba(7, 20, 30, 0.06); min-height: 64px; }
+
+.image-controls { display: flex; gap: 8px; margin-bottom: 12px; }
+
+.image-controls input { flex: 1 1 0%; padding: 10px; border-radius: 10px; border: 1px solid rgba(7, 20, 30, 0.06); }
+
+.image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+
+.img-card { border-radius: 10px; border: 1px solid rgba(7, 20, 30, 0.04); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 6px; background: linear-gradient(rgb(255, 255, 255), rgb(251, 253, 255)); }
+
+.img-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.help-line { margin-top: 8px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 900px) {
+  .app { flex-direction: column; padding: 16px; }
+  .sidebar { width: 100%; }
+}
+------MultipartBoundary--nRTE9dhTmBSSwjHv7XDt9BlyVr36uaxYobc0U4piO8------
