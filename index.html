@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orien — Your Futuristic AI Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero-landing">
+    <div class="hero-inner">
+      <div class="brand">
+        <div class="logo">O</div>
+        <div>
+          <h1>Orien</h1>
+          <p class="tag">Welcome to Orien — Your Futuristic AI Assistant</p>
+        </div>
+      </div>
+      <div class="cta">
+        <button id="openAppBtn" class="btn primary">Chat with Orien</button>
+        <button id="openImagesBtn" class="btn">Generate Images</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="app" style="display:none;">
+    <aside class="sidebar">
+      <div class="side-brand">
+        <div class="logo small">O</div>
+        <div>
+          <h2>Orien</h2>
+          <div class="muted">Futuristic AI • Chat & Image</div>
+        </div>
+      </div>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="chat">Chat</button>
+        <button class="tab" data-tab="image">Image Generator</button>
+      </nav>
+
+      <div class="controls">
+        <button id="clearBtn" class="btn ghost">Clear Chat</button>
+        <button id="downloadBtn" class="btn ghost">Download Last Image</button>
+      </div>
+
+      <footer class="side-note">
+        <small>Deploy to Vercel and add OPENAI_API_KEY in env vars.</small>
+      </footer>
+    </aside>
+
+    <section class="workspace">
+      <header class="workspace-header">
+        <h3 id="workspaceTitle">Chat with Orien</h3>
+        <div class="panel-switch">
+          <button class="panel-pill active" data-panel="chat">Chat</button>
+          <button class="panel-pill" data-panel="image">Image</button>
+        </div>
+      </header>
+
+      <div class="panel-area">
+        <section id="chatPanel" class="panel active">
+          <div id="messages" class="messages">
+            <div class="msg bot">
+              <div class="av">O</div>
+              <div class="bub">Hello — I'm Orien. Ask me anything.</div>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <textarea id="chatInput" placeholder="Type a message..."></textarea>
+            <button id="sendBtn" class="btn primary">Send</button>
+          </div>
+        </section>
+
+        <section id="imagePanel" class="panel" style="display:none;">
+          <div class="image-controls">
+            <input id="imagePrompt" placeholder="Prompt (e.g., 'sleek white-blue city at dawn')" />
+            <button id="genImageBtn" class="btn primary">Generate</button>
+          </div>
+
+          <div id="imageGrid" class="image-grid"></div>
+        </section>
+      </div>
+
+      <div class="help-line">
+        <small>Tip: Use clear questions for best chat answers. For images, be vivid and descriptive.</small>
+      </div>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
